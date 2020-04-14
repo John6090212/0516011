@@ -134,7 +134,7 @@
   <!-- Project Libraries -->
   
   <path id="library.lib.classpath">
-    <pathelement location="${basedir}/lib"/>
+    <pathelement location="Lab2/lib"/>
   </path>
   
   <!-- Modules -->
