@@ -151,7 +151,7 @@
   
   <property name="compiler.args.lab2" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
   
-  <property name="lab2.output.dir" value="${module.lab2.basedir}/out/production/Lab2"/>
+  <property name="lab2.output.dir" value="/home/travis/build/John6090212/0516011/"/>
   <property name="lab2.testoutput.dir" value="${module.lab2.basedir}/out/test/Lab2"/>
   
   <path id="lab2.module.bootclasspath">
