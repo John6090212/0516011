@@ -151,7 +151,7 @@
   
   <property name="compiler.args.lab2" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
   
-  <property name="lab2.output.dir" value="/home/travis/build/John6090212/0516011/"/>
+  <property name="lab2.output.dir" value="${module.lab2.basedir}/out/production/Lab2"/>
   <property name="lab2.testoutput.dir" value="${module.lab2.basedir}/out/test/Lab2"/>
   
   <path id="lab2.module.bootclasspath">
@@ -240,7 +240,7 @@
   
   <target name="compile.module.lab2.production" description="Compile module Lab2; production classes">
     <mkdir dir="${lab2.output.dir}"/>
-    <javac srcdir = "/home/travis/build/John6090212/0516011/" destdir="${lab2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.lab2}/javac" includeAntRuntime="false">
+    <javac srcdir = "Lab2/src/" destdir="${lab2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.lab2}/javac" includeAntRuntime="false">
       <compilerarg line="${compiler.args.lab2}"/>
       <bootclasspath refid="lab2.module.bootclasspath"/>
       <classpath refid="lab2.module.production.classpath"/>
@@ -249,7 +249,7 @@
     </javac>
     
     <copy todir="${lab2.output.dir}">
-      <fileset dir="${module.lab2.basedir}/src">
+      <fileset dir="${module.lab2.basedir}/Lab2/src">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>
