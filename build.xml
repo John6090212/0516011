@@ -231,7 +231,7 @@
   
   <path id="lab2.module.sourcepath">
     <dirset dir="${module.lab2.basedir}">
-      <include name="src"/>
+      <include name="Lab2/src"/>
     </dirset>
   </path>
   
