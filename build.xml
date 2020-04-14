@@ -136,20 +136,23 @@
   <path id="library.lib.classpath">
     <pathelement location="${basedir}/lib"/>
   </path>
+  
   <!-- Register Custom Compiler Taskdefs -->
+  <!--
   <property name="javac2.home" value="Lab2/lib"/>
   <path id="javac2.classpath">
-  <pathelement location="${javac2.home}/javac2.jar"/>
-  <pathelement location="${javac2.home}/jdom.jar"/>
-  <pathelement location="${javac2.home}/asm-all.jar"/>
-  <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
   </path>
-<taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
   <target name="register.custom.compilers">
     <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
     <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
   </target>
-  
+  -->
   <!-- Modules -->
   
   
