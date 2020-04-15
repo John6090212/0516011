@@ -271,7 +271,7 @@
   
   <target name="build.modules" depends="init, clean, compile.module.lab2" description="build all modules"/>
   
-  <target name="test" depends="build.modules" description="build all"/>
+  <target name="test" depends="build.modules" description="build all">
   <junit printsummary="yes" haltonfailure="no">
           <classpath>
               <pathelement path="${lab02.output.dir}"/>
@@ -295,4 +295,5 @@
         </fileset>
       </batchtest>
       </junit>
+	</target>
 </project>
