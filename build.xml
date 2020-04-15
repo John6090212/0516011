@@ -272,9 +272,9 @@
   <target name="build.modules" depends="init, clean, compile.module.lab2" description="build all modules"/>
   
   <target name="test" depends="build.modules" description="build all">
-  <junit printsummary="yes" haltonfailure="no">
+  <junit printsummary="yes" haltonfailure="yes">
           <classpath>
-              <pathelement path="/home/travis/build/John6090212/0516011/out/production/Lab2"/>
+              <pathelement path="${lab02.output.dir}"/>
               <pathelement location="${path.variable.maven_repository}/apiguardian-api-1.0.0.jar"/>
 			  <pathelement location="${path.variable.maven_repository}/junit-jupiter-api-5.4.2.jar"/>
 			  <pathelement location="${path.variable.maven_repository}/junit-jupiter-engine-5.4.2.jar"/>
